@@ -1,0 +1,170 @@
+﻿@import 'imports/global.css';
+@import 'imports/component.css';
+@import 'imports/policy.css';
+@import 'imports/tables.css';
+@import 'imports/article.css';
+@import 'imports/staticcards.css';
+
+
+/*FILL TAB CUSTOM*/
+/**remove header in desktop**/
+.fill-tab__custom--remove-desktop-fill-tabs .comparison-nav__container {display: none !important;}
+
+/*modify headline in mobile*/
+@media (max-width: 795px){
+    .fill-tab__custom--headline {background-color: #2E1A47; padding-top: 4rem; padding-left: 4.167%; padding-right: 4.167%; margin-bottom: -1px; float: left; width: 100%;}
+    .fill-tab__custom--headline p,
+    .fill-tab__custom--headline h2,
+    .fill-tab__custom--headline h3 {color: #fff;}
+}
+
+/*FILL TAB ACCORDION ADDITIONAL CONTENT*/
+.fill-tab-accordion-additional-content .accordion-card-header:not(.fill-tab-accordion-additional-content .card-body .accordion-card-header) {text-align: center;}
+@media (max-width: 795px){
+    .fill-tab-accordion-additional-content .button-margin .btn-primary {border: none; margin-left: auto; margin-right: auto; font-size: 1.6rem; font-weight: 600;}
+    .fill-tab-accordion-additional-content .accordion-text.truist--icon-carat-up.after:after, 
+    .fill-tab-accordion-additional-content .accordion-text.truist--icon-carat-down.after:after {font-size: 1.4rem;}
+    .fill-tab-accordion-additional-content .button-margin .btn-primary:hover, 
+    .fill-tab-accordion-additional-content .button-margin .btn-primary:focus, 
+    .fill-tab-accordion-additional-content .button-margin .btn-primary:active, 
+    .fill-tab-accordion-additional-content .button-margin .btn-primary:active:focus {border: none; color: #2e1a47; background-color: transparent;}
+    .fill-tab-accordion-additional-content .btn-primary:hover .accordion-text, 
+    .fill-tab-accordion-additional-content .btn-primary:hover .accordion-text:before, 
+    .fill-tab-accordion-additional-content .btn-primary:hover .accordion-text:after, 
+    .fill-tab-accordion-additional-content .btn-primary:focus .accordion-text, 
+    .fill-tab-accordion-additional-content .btn-primary:focus .accordion-text:before, 
+    .fill-tab-accordion-additional-content .btn-primary:focus .accordion-text:after {color: #2e1a47;}
+}
+@media (min-width: 796px){
+    .fill-tab-accordion-additional-content .accordion-card-header {display: none;}
+    .fill-tab-accordion-additional-content .card-body .accordion-card-header {display: block;}
+}
+
+/*PRODUCT COMPARISON MOBILE CONTENT*/
+.product-comparison-mobile-content--product-block {display: flex; margin-bottom: 4rem;}
+.product-comparison-mobile-content--product-image {max-width: 8rem; margin-right: 2rem;}
+.product-comparison-mobile-content--product-image > img {width: 100%; height: auto;}
+.product-comparison-mobile-content--product-text {flex: 2;}
+.product-comparison-mobile-content p {margin-bottom: 0;}
+.product-comparison-mobile-content--product-call-out {text-transform: uppercase; color: #937FA8; font-size: 1.4rem; font-weight: 600;}
+.product-comparison-mobile-content--product-title {font-size: 2rem;}
+.product-comparison-mobile-content--product-title::after {content: "\2192"; margin-left: 1rem; font-size: 2rem;}
+.product-comparison-mobile-content--product-title a {color: #563E7C; font-weight: 600; text-decoration: none;}
+/*display*/
+@media (min-width: 769px){
+    .table-product-comparison {display: block;}
+    .product-comparison-mobile-content {display: none;}
+}
+@media (max-width: 768px){
+    .table-product-comparison {display: none;}
+    .product-comparison-mobile-content {display: block;}
+}
+
+
+
+/*disclosures ordered list - alt*/
+.truist-tabs .ori-tabs__panel .disclosures-alt-ol ol {list-style: none; padding-left: 4rem; position: relative;}
+.truist-tabs .ori-tabs__panel .disclosures-alt-ol ol li {padding-bottom: 2rem;}
+.truist-tabs .ori-tabs__panel .disclosures-alt-ol ol li:first-child {padding-top: 2rem;}
+.truist-tabs .ori-tabs__panel .disclosures-alt-ol ol li:last-child {padding-bottom: 0;}
+.truist-tabs .ori-tabs__panel .disclosures-alt-ol ol li:before {counter-increment: mycounter; content: counter(mycounter)"."; position: absolute; left: 0;}
+.truist-tabs .ori-tabs__panel .disclosures-alt-ol ol:first-of-type {counter-reset: mycounter;}
+.truist-tabs .ori-tabs__panel .disclosures-alt-ol ol ol {list-style-type: lower-alpha; padding-left: 2rem;}
+.truist-tabs .ori-tabs__panel .disclosures-alt-ol ol ol li {padding-left: 2rem;}
+.truist-tabs .ori-tabs__panel .disclosures-alt-ol ol ol li:before {display: none;}
+.truist-tabs .ori-tabs__panel .disclosures-alt-ol ol ol.special {list-style-type: none; padding-left: 8rem;}
+
+
+
+
+/*Payment relief graphic bullets*/
+/* Graphic Bullets */
+ul.connect-list {margin-top: -1px;}
+ul.connect-list li {padding-left: 15px; margin-bottom: 2.5em; list-style: none;}
+
+.connect-content-list {font-size: 2.2rem; font-weight: 300; display: inline; margin-right: 0.5em;}
+
+ul.connect-list li {position: relative;
+    /* so that pseudoelements are positioned relatively to their "li"s*/
+    /* use padding-bottom instead of margin-bottom.*/ 
+    margin-bottom: 0; /* This overrides previously specified margin-bottom */
+    padding-bottom: 2.5em;
+}
+
+ul.connect-list li:after {
+    /* bullets */
+    content: url('/content/dam/truist-bank/us/en/icons/code/default-white.svg');
+    position: absolute;
+    left: -27px; /*adjust manually*/
+    top: 8px;
+}
+
+ul.connect-list li.active:after {
+    /* bullets */
+    content: url('/content/dam/truist-bank/us/en/icons/code/active.svg');
+    position: absolute;
+    left: -27px; /*adjust manually*/
+    top: 7px;
+}
+
+ul.connect-list li:before {
+    /* lines */
+    content:"";
+    position: absolute;
+    left: -16px; /* adjust manually */
+    border-left: 1px solid #2e1a47;
+    height: 100%;
+    width: 3px;
+}
+
+ul.connect-list li:first-child:before {
+   /* first li's line */
+   top: 30px; /* moves the line down so that it disappears under the bullet. Adjust manually */
+}
+
+ul.connect-list li:last-child:before {
+    /* last li's line */
+   height: 13px; /* shorten the line so it goes only up to the bullet. Is equal to first-child:before's top */
+}
+
+ul.connect-list li a {
+  color: #2e1a47;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+ul.connect-list li a.active {
+  color: #2e1a47;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+ul.connect-list li a:hover {
+  color: #2e1a47;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+ul.connect-list li a:focus {
+  color: #2e1a47;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Graphic Bullets for Gray BG */
+.grid__bg-color--light-gray ul.connect-list li:after {
+    /* bullets */
+    content: url('/content/dam/truist-bank/us/en/icons/code/default-gray.svg');
+    position: absolute;
+    left: -27px; /*adjust manually*/
+    top: 8px;
+}
+
+.grid__bg-color--light-gray ul.connect-list li.active:after {
+    /* bullets */
+    content: url('/content/dam/truist-bank/us/en/icons/code/active.svg');
+    position: absolute;
+    left: -27px; /*adjust manually*/
+    top: 7px;
+}
+/* END Graphic Bullets */

@@ -1,0 +1,160 @@
+   .tvtab-container1 {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1328px;
+    font-family: 'Truist Trio', 'Arial', sans-serif;
+    overflow: hidden;
+   }
+   
+   .tvtab-container1 .tvtab-show-for-small {
+    display: none;
+    transition: all .5s linear;
+   }
+   
+   .tvtab-container1 .tvtab-hide-for-small {
+    display: block;
+    transition: all .5s linear;
+   }
+   
+   .tvtab-control {
+    cursor: default; 
+    border-radius: 0 !important; /* ** Override BS pills border-radius ** */
+    position: relative;
+    min-height: 40px;
+    padding-top: 0 !important; /* ** Override BS pills border-radius ** */
+    padding-bottom: 0 !important; /* ** Override BS pills border-radius ** */
+    overflow: hidden;
+    outline: none;
+    text-decoration: none;
+    margin-bottom: 20px;
+    /* width: 100%; */
+    /* transition: all .5s linear; */
+   }
+   
+   .tvtab-control .vtab-title {
+    cursor: pointer;
+    text-align: left;
+    padding: 10px 20px 5px 25px;
+    display: block;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #7C6992;
+    border: solid #C1BBCA;
+    border-width: 0 0 0 3px;
+    background: #ffffff;
+    position: relative;
+    z-index: 2;
+    transition: all .5s linear;
+    /* padding: 0px 20px 0px 25px;
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #707070;
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+    transition: all .5s linear;
+    text-decoration: none; */
+   }
+   
+   .tvtab-control .tvtab-description {
+    text-align: left;
+    padding: 0px 20px 0px 25px;
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #707070;
+    opacity: 0;
+    position: relative; 
+    z-index: 1;
+    word-wrap: break-word;
+    margin-top: var(--panelAnimate);
+    text-decoration: none;
+    transition: all .5s linear;
+   }
+   
+   .tvtab-control.active {
+    background: none !important; /* ** Override BS pills active class ** */
+    font-weight: 700 !important; /* ** Override BS pills active class ** */
+    color: #2e1a47 !important; /* ** Override BS pills active class ** */
+   }
+   
+   .tvtab-control:hover .vtab-title,
+   .tvtab-control:focus .vtab-title,
+   .tvtab-control.active .vtab-title {
+    font-weight: 700 !important; /* ** Override BS pills active class ** */
+    color: #2e1a47 !important; /* ** Override BS pills active class ** */
+    border: solid #2e1a47;
+    border-width: 0 0 0 6px;
+    padding: 10px 20px 5px 22px;
+   }
+   
+   .tvtab-control.active .tvtab-description {
+    opacity: 1;
+    padding: 10px 20px 20px 25px;
+    margin-top: 0px !important;
+   }
+   
+   .tvtab-pane {
+    font-size: 18px;
+    line-height: 24px;
+    transition: all .5s linear;
+   }
+   
+   @media (min-width: 0px) and (max-width: 767.98px) {
+   
+    .tvtab-container1 .tvtab-show-for-small {
+     display: block;
+     transition: all 1s linear;
+    }
+    
+    .tvtab-container1 .tvtab-hide-for-small {
+     display: none;
+    } 
+   
+    .tvtab-control .vtab-title {
+     transition: all .3s linear;
+    }
+   
+    .tvtab-control .tvtab-description {
+     padding: 0px 20px 0px 25px;
+     opacity: 0;
+     height: auto;
+     /* position: relative; */
+     /* Need to come up with a better solution for margin calculation */
+     /* this animates the panel down to get the accordion effect */
+     /* margin-top: var(--panelAnimate); */
+     transition: all 1s linear;
+    }
+   
+    .tvtab-control:not(:first-of-type) {
+     margin-top: 20px;
+    }
+   
+    .tvtab-control.active .tvtab-description {
+     opacity: 1;
+     max-height: 100%;
+     padding: 10px 20px 10px 25px;
+     /* margin-top: 0; */
+    }
+   
+   .tvtab-pane {
+    padding: 20px 0;
+    transition: all 1s linear;
+    text-decoration: none;
+   }
+   }
+   
+
+@media (min-width: 0px) and (max-width: 968px) {
+    .tvtab-control .tvtab-description {
+        margin-top: var(--newPanelAnimate) !important;
+    }    
+}
+
+.tvtab-container1 .row {align-items: center;}
+.vtab-container-top-align .tvtab-container1 .row {align-items: flex-start;}
